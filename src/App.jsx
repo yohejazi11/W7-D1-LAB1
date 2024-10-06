@@ -29,6 +29,10 @@ function App() {
     })
   }
 
+  function editeFun(id){
+    navigate(`/update/${id}`)
+  }
+
   return (
     <div className='flex flex-col items-center gap-y-[1rem]'>
       <div>
@@ -61,6 +65,7 @@ function App() {
               <img src={item.image}></img>
               <p>{item.name}</p>
               <button onClick={()=>{deleteBTN(item.id)}} className='h-[40px] border-red-700 text-red-700 bg-transparent border-[3px] rounded-[10px] font-bold'>DELETE</button>
+              <button onClick={()=>{editeFun(item.id)}} className='h-[40px] border-blue-700 text-blue-700 bg-transparent border-[3px] rounded-[10px] font-bold'>EDITE</button>
 
             </div>
           ))

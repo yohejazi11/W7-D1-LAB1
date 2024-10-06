@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Addcara from './assets/Addcara.jsx';
+import Update from './assets/Update.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/add",
     element: <Addcara></Addcara>,
+  },
+  {
+    path: "/update/:id",
+    element: <Update></Update>,
   },
 ]);
 createRoot(document.getElementById('root')).render(
